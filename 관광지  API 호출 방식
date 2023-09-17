@@ -1,0 +1,29 @@
+한국관광공사_관광사진 정보_GW
+https://www.data.go.kr/data/15101914/openapi.do#/API%20%EB%AA%A9%EB%A1%9D/galleryList1
+
+예시 입력
+https://apis.data.go.kr/B551011/PhotoGalleryService1/gallerySearchList1?numOfRows=10&pageNo=1&MobileOS=AND&MobileApp=testapp&arrange=B&keyword=%ED%95%9C%EC%98%A5%EB%A7%88%EC%9D%84&_type=json&serviceKey=QsJbsoueaViy3V83e3WvrYl86auajeLHgIX3coFNj%2BU52UthL5Xd8Cv753XXEQU8ND4kZTUVh%2B2AxBtJBlmrmg%3D%3D
+
+인증키
+QsJbsoueaViy3V83e3WvrYl86auajeLHgIX3coFNj+U52UthL5Xd8Cv753XXEQU8ND4kZTUVh+2AxBtJBlmrmg==
+
+
+
+한국관광공사_국문 관광정보 서비스_GW
+https://www.data.go.kr/data/15101578/openapi.do#/API%20%EB%AA%A9%EB%A1%9D/searchKeyword1
+
+예시 입력
+https://apis.data.go.kr/B551011/KorService1/searchKeyword1?MobileOS=AND&MobileApp=test&keyword=%EC%A0%84%EC%A3%BC&serviceKey=QsJbsoueaViy3V83e3WvrYl86auajeLHgIX3coFNj%2BU52UthL5Xd8Cv753XXEQU8ND4kZTUVh%2B2AxBtJBlmrmg%3D%3D
+
+인증키
+QsJbsoueaViy3V83e3WvrYl86auajeLHgIX3coFNj+U52UthL5Xd8Cv753XXEQU8ND4kZTUVh+2AxBtJBlmrmg==
+
+
+한글 인코딩 하는 곳
+
+https://meyerweb.com/eric/tools/dencoder/
+
+
+
+
+대부분 get 방식 
