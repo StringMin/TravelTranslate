@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Detail Page</title>   <!--  수정 예정  -->
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: black; /* 전체 배경을 검정색으로 설정 */
+        }
+        
+        #content {
+            width: 390px;
+            height: 778px;
+            background-color: white; /* 내용 부분은 하얀색으로 설정 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: auto;
+        }
+        .text-button {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: black;
+            cursor: pointer;
+            margin-top: 52px;
+            margin-left: 11px;
+            width: 49px;
+            height: 19px;
+          }
+        .Detail_main_img {
+            width: 100%;  /* 화면의 가로 크기에 꽉 차게 */
+            height: auto;  /* 원본 비율 유지 */
+            object-fit: contain;  /* 원본 비율 유지하면서 화면에 꽉 차게 */
+            margin-top: 18.39px;
+          }
+        .image_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
+        .Detail_sub_img{
+            /*width: 100px;*/
+            width: calc(33.333% - 20px);
+            height: 84px;
+        }
+        .bottom_fix_button{
+            position: fixed;
+            border-radius: 999px;
+            left: 50%;
+            bottom: 5%;
+            transform: translateX(-50%);
+        }
+        /* 스크롤해도 위치가 고정되면서 화면 좌우 중앙에 있는 버튼 */
+        .center-horizontal-fixed-button {
+          position: fixed;
+          left: 50%;
+          background-color: #007bff;
+          color: white;
+          padding: 10px;
+          border-radius: 5px;
+          cursor: pointer;
+          /* 버튼 자체의 중앙을 화면의 좌우 중앙에 맞춤 */
+          transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div style="font-family: 'Roboto', sans-serif;
+         font-size: 20px;
+         font-weight: 700;
+         display: flex; 
+         align-items: flex-start;" >
+            <!-- <span class="text-button" onclick="alert('Clicked!')"> < 이전 </span> -->
+            <span class="text-button"> < 이전 </span>
+            <div style="margin-top: 50px; margin-left: 87px; flex-grow: 1;">대전 관광지</div>
+        </div>
+        <img class="Detail_main_img" src="SSD.png" alt="Loading...">
+        <div>
+            <div style="font-family: 'Roboto', sans-serif; margin-top: 25.86px; margin-left: 26.79px; font-size:30px; font-weight: 700;">성심당</div>
+            <!-- <div style="margin-top: 25.86px; margin-left: 26.79px; font-size:30px; font-weight: 700;">제목ABCD</div> -->
+            <div style="margin-top: 16px; margin-left: 30px; margin-right: 18.96px;">
+                성심당(聖心堂)은 대전광역시에 위치한 베이커리 전문점이
+                다. 튀김소보로나 부추빵으로 이름이 났으며, 2014년 프란
+                치스코 교황 방한 때 교황의 식사빵을 만든 기업으로 유명하
+                다. 점포는 으능정이, 대전역, 대전컨벤션센터, 롯데백화점 
+                대전점 등 다섯 곳에 있는데, 대전 외에 점포를 내지 않는다.
+            </div>
+        </div>
+        <div class="image-container" style="padding-left: 30px; padding-top: 47.87px;">
+            <img class="Detail_sub_img" src="test_img.png" alt="Loading...">
+            <img class="Detail_sub_img" src="test_img.png" alt="Loading...">
+            <img class="Detail_sub_img" src="test_img.png" alt="Loading...">
+            <img class="Detail_sub_img" src="test_img.png" alt="Loading...">
+            <img class="Detail_sub_img" src="test_img.png" alt="Loading...">
+            <img class="Detail_sub_img" src="test_img.png" alt="Loading...">
+
+        </div>
+        <button class="bottom_fix_button">test!</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
