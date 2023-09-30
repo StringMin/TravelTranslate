@@ -1,0 +1,57 @@
+.search {
+    position: absolute;
+    width: 308px;
+    height: 32px;
+}
+
+.search .div{
+    position: absolute;
+    width: 308px;
+    height: 32px;
+    display: flex;
+}
+.search .group-11{
+    position: absolute;
+    width: 308px;
+    height: 32px;
+}
+.search .rectangle-32{
+    position: absolute;
+    width: 308px;
+    height: 32px;
+
+    background: #FFFFFF;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.search .text{
+    position: absolute;
+    width: 75px;
+    height: 14px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+
+    color: #A2A2A2;
+}
+.search .ic_search{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/ic_search.svg");
+
+}
+.search .vector{
+    position: absolute;
+    left: 12.5%;
+    right: 12.5%;
+    top: 12.5%;
+    bottom: 12.5%;
+
+    border: 2px solid #484848;
+}
+
