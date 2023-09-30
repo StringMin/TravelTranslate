@@ -26,6 +26,9 @@ public class TestController {
         return "contentDetail2";
     }
 
-
+    @RequestMapping("/search")
+    public String search(){
+        return "search";
+    }
 
 }
