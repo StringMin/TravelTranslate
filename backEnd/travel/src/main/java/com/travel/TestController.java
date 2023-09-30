@@ -21,6 +21,9 @@ public class TestController {
         return "contentDetail";
     }
 
-
+    @RequestMapping("/contentDetail2")
+    public String contentDetail2(){
+        return "contentDetail2";
+    }
 
 }
