@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
 <head>
     <link rel="stylesheet" href="/css/main.css" />
     <script src="/js/openApiCall.js"></script>
+    <title>Main Page</title>
 
 </head>
 <body>
+<h1>Main Page</h1>
+<p>Latitude: <span th:text="${latitude}"></span></p>
+<p>Longitude: <span th:text="${longitude}"></span></p>
+
 <div class="main">
     <div class="div">
         <div class="text-wrapper">Traveling</div>
