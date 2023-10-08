@@ -1,47 +1,210 @@
+<!--<p>Latitudeuu: <span th:text="${latitude}"></span></p>-->
+<!--<p>Longitudeuu: <span th:text="${longitude}"></span></p>-->
+<style>
+    .main {
+        position: relative;
+    }
+
+    .title {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button-home {
+        margin-left: 15px;
+        margin-right: 10px;
+    }
+
+    .text-home {
+        font-size: 18px;
+    }
+
+    .text-title {
+        flex: 1;
+        text-align: center;
+        font-weight: bold;
+        position: relative; /* 상대적인 위치 지정 */
+    }
+
+    .text-title:last-child {
+        font-size: 22px;
+        left: -34px; /* 34px 왼쪽으로 이동 */
+    }
+
+    .map,
+    .overlap {
+        height: calc(60%);
+    }
+
+    .overlap {
+        position: relative;
+        display: flex;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .overlap-items {
+        display: flex;
+        flex-wrap: wrap; /* 요소들을 여러 줄로 나눔 */
+        justify-content: space-between; /* 요소들 사이의 여백을 조절 */
+    }
+
+    .overlap > .overlap-items > .grid-item {
+        flex-basis: calc(33.33% - 10px * 2 / 3);
+        margin-bottom: 10px;
+        background: #6C6C6C;
+        border-radius: 10px;
+        height: 100px;
+        width: 80px;
+        color: white;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0em;
+        display: flex; /* 텍스트를 세로로 정렬하기 위해 필요 */
+        flex-direction: column; /* 텍스트를 세로로 정렬하기 위해 필요 */
+        justify-content: flex-end; /* 텍스트를 아래로 정렬 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+    }
+
+    .grid-item {
+        position: relative;
+    }
+
+    .text-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white; /* 글자 색상 조절 */
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0em;
+        display: flex; /* 텍스트를 세로로 정렬하기 위해 필요 */
+        flex-direction: column; /* 텍스트를 세로로 정렬하기 위해 필요 */
+        justify-content: flex-end; /* 텍스트를 아래로 정렬 */
+    }
+
+
+    #searchBox {
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    #searchInput {
+        flex: 1;
+        width: 308px;
+        height: 32px;
+        border: none;
+        border-radius: 5px;
+        padding-left: 10px;
+    }
+
+    #searchButton {
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+        color: white;
+        cursor: pointer;
+        padding-right: 10px;
+    }
+
+    .main .overlap-title {
+        color: #000000;
+        left: 30px;
+        position: absolute;
+        top: 10px;
+        white-space: nowrap;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+</style>
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="">
+<html>
 <head>
-    <link rel="stylesheet" href="/css/main.css" />
-    <script src="/js/openApiCall.js"></script>
-    <title>Main Page</title>
-
+    <div class="title">
+        <img class="button-home" src="/img/icon-arrow-back-ios.svg" />
+        <div class="text-home">홈</div>
+        <div class="text-title">Traveling</div>
+    </div>
+    <div class="map" id="map"></div>
+    <div id="searchBox">
+        <input type="text" id="searchInput" placeholder="장소를 검색하세요">
+        <img id="searchButton" src="/img/ic_search.svg">
+    </div>
 </head>
-<body>
-<h1>Main Page</h1>
-<p>Latitudeuu: <span th:text="${latitude}"></span></p>
-<p>Longitudeuu: <span th:text="${longitude}"></span></p>
-
+<body style="margin: 0px">
 <div class="main">
-    <div class="div">
-        <div class="text-wrapper">Traveling</div>
-
-        <div class="rectangle-2"></div>
-        <div class="overlap">
-            <div class="text-wrapper-4">인기 관광지</div>
-            <div class="text-wrapper-5">텍스트</div>
-            <div class="text-wrapper-6">텍스트</div>
-            <div class="text-wrapper-7">텍스트</div>
-            <div class="text-wrapper-8">텍스트</div>
-            <div class="text-wrapper-9">텍스트</div>
-            <div class="text-wrapper-10">텍스트</div>
-            <div class="text-wrapper-11">추천 관광지</div>
-            <div class="rectangle-3"></div>
-            <div class="rectangle-4"></div>
-            <div class="rectangle-5"></div>
-            <div class="rectangle-6"></div>
-            <div class="rectangle-7"></div>
-            <div class="rectangle-8"></div>
+    <div class="overlap">
+        <div class="overlap-title" style="padding-top:20px">대전 관광지 추천</div>
+        <div class="overlap-items" style="padding-top:65px">
+            <div class="grid-item" onclick="location.href='/contentDetail2'">
+                <img src="/img/test_img.png">
+                <div class="text-overlay">성심당</div>
+            </div>
+            <div class="grid-item">
+                <img src="/img/test_img.png">
+                <div class="text-overlay">성심당</div>
+            </div>
+            <div class="grid-item">
+                <img src="/img/test_img.png">
+                <div class="text-overlay">성심당</div>
+            </div>
+            <div class="grid-item">
+                <img src="/img/test_img.png">
+                <div class="text-overlay">성심당</div>
+            </div>
+            <div class="grid-item">
+                <img src="/img/test_img.png">
+                <div class="text-overlay">성심당</div>
+            </div>
+            <div class="grid-item">
+                <img src="/img/test_img.png">
+                <div class="text-overlay">성심당</div>
+            </div>
         </div>
-        <div class="text-wrapper-12">홈</div>
-        <img class="icon-arrow-back-ios" src="/img/icon-arrow-back-ios.svg" />
-        <img class="tabler-search" src="/img/tabler-search.svg" />
-        <div class="rectangle-9"></div>
-        <div class="rectangle-10"></div>
     </div>
 </div>
 </body>
 </html>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=2z6ef3c4qs"></script>
 <script>
-    callApiInfo('temp')
-
+    var map;
+    function initMap() {
+        map = new naver.maps.Map('map', {
+            center: new naver.maps.LatLng(36.3398, 127.3940),
+            zoom: 13
+        });
+        var searchButton = document.getElementById('searchButton');
+        var searchInput = document.getElementById('searchInput');
+    }
+    initMap();
 </script>
