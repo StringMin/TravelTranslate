@@ -8,21 +8,20 @@
 </head>
 <body>
 <div class = "search">
-    <div class="div">
-        <div class="group-11"></div>
-        <div class="rectangle-32"></div>
-        <div class="text"></div>
-        <input class="vector" id="inputText" rows="4" cols="30" onchange="callApiInfo(this.value)">
 
-        </input>
-        <button class="ic_search">
+    <input id="inputText" placeholder="장소를 검색하세요" onchange="callApiInfo(this.value)"/>
+    <button >
+        <img id="searchButton" src="/img/ic_search.svg"/>
+    </button>
 
-        </button>
-        <p id="result"></p>
+<!--    <input type="text" id="searchInput" placeholder="장소를 검색하세요" onchange="callApiInfo(this.value)"/>-->
+<!--    <p id="searchResult"></p>-->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modalContent"></p>
+        </div>
     </div>
 </div>
 </body>
 </html>
-<script>
-    callApiInfo()
-</script>
